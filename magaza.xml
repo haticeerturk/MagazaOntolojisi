@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<magazalar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="file:/home/hatice/Oxygen%20XML%20Editor%2018/./MagazaYonetimSistemi.xsd">
+    <magaza>
+        <magazaKodu>001</magazaKodu>
+        <magazaAdi>HM Waikiki</magazaAdi>
+        <magazaIli>Bursa</magazaIli>
+        <magazaAdresi>Cumhuriyet Caddesi İpek Sokak No:3 Orhangazi</magazaAdresi>
+        <magazaCalisanSayisi>2</magazaCalisanSayisi>
+        <calisanlar>
+            <calisan>
+                <calisanAdi>Derya</calisanAdi>
+                <calisanSoyadi>Deniz</calisanSoyadi>
+                <calisanTelefonNumaralari>
+                    <calisanTelefonu>
+                        <telefon>(531)-111-11-11</telefon>
+                        <calisanTelefonuTipi>İş</calisanTelefonuTipi>
+                    </calisanTelefonu>
+                </calisanTelefonNumaralari>
+                <calisanAdresi>
+                    <calisanAdresIli>Bursa</calisanAdresIli>
+                    <calisanAdresIlcesi>Osmangazi</calisanAdresIlcesi>
+                    <calisanAcikAdresi>Asya Cad. Milli Sk. No:3</calisanAcikAdresi>
+                </calisanAdresi>
+            </calisan>
+            <calisan>
+                <calisanAdi>Buğra</calisanAdi>
+                <calisanSoyadi>Taba</calisanSoyadi>
+                <calisanTelefonNumaralari>
+                    <calisanTelefonu>
+                        <telefon>(542)-222-22-22</telefon>
+                        <calisanTelefonuTipi>Mobil</calisanTelefonuTipi>
+                    </calisanTelefonu>
+                </calisanTelefonNumaralari>
+                <calisanAdresi>
+                    <calisanAdresIli>Bursa</calisanAdresIli>
+                    <calisanAdresIlcesi>Merkez</calisanAdresIlcesi>
+                    <calisanAcikAdresi>Avrupa Cad. Derya Sk. No:1 Yıldırım</calisanAcikAdresi>
+                </calisanAdresi>
+            </calisan>
+        </calisanlar>
+        <urunKategorileri>
+            <urunKategori isim="ustGiyimKategorisi">
+                <urun>
+                    <urunAdi>Kazak</urunAdi>
+                    <urunFiyati>35.90</urunFiyati>
+                    <urunStogu>45</urunStogu>
+                    <urunBarkodu>1234567891021</urunBarkodu>
+                    <urunTurleri>
+                        <urunTuru>Erkek</urunTuru>
+                    </urunTurleri>
+                </urun>
+                <urun>
+                    <urunAdi>Gömlek</urunAdi>
+                    <urunFiyati>81.99</urunFiyati>
+                    <urunStogu>100</urunStogu>
+                    <urunBarkodu>9128651237564</urunBarkodu>
+                    <urunTurleri>
+                        <urunTuru>Kadın</urunTuru>
+                    </urunTurleri>
+                </urun>
+                
+                
+            </urunKategori>
+            <urunKategori isim="altGiyimKategorisi">
+                <urun>
+                    <urunAdi>Pantalon</urunAdi>
+                    <urunFiyati>50.00</urunFiyati>
+                    <urunStogu>20</urunStogu>
+                    <urunBarkodu>5544221133667</urunBarkodu>
+                    <urunTurleri>
+                        <urunTuru>Kadın</urunTuru>
+                    </urunTurleri>
+                </urun>
+                <urun>
+                    <urunAdi>Şort</urunAdi>
+                    <urunFiyati>25.00</urunFiyati>
+                    <urunStogu>50</urunStogu>
+                    <urunBarkodu>9999900000888</urunBarkodu>
+                    <urunTurleri>
+                        <urunTuru>Çocuk</urunTuru>
+                    </urunTurleri>
+                </urun>
+            </urunKategori>
+        </urunKategorileri>
+        <satislar>
+            <satis>
+                <satinAlinanUrunBarkodu>1234567891021</satinAlinanUrunBarkodu>
+                <satinAlinanUrunBarkodu>9999900000888</satinAlinanUrunBarkodu>
+                <satinAlanMusteriBilgisi>
+                    <satinAlanMusteriAdi>Arda Sazan</satinAlanMusteriAdi>
+                    <satinAlanMusteriKimligi>24135763212</satinAlanMusteriKimligi>
+                    <satinAlanMusteriTelefonu>(532)-145-21-45</satinAlanMusteriTelefonu>
+                </satinAlanMusteriBilgisi>
+                <toplamUcreti>60.90</toplamUcreti>
+            </satis>
+            <satis>
+                <satinAlinanUrunBarkodu>9999900000888</satinAlinanUrunBarkodu>
+                <satinAlanMusteriBilgisi>
+                    <satinAlanMusteriAdi>Aslı Şahin</satinAlanMusteriAdi>
+                    <satinAlanMusteriKimligi>55544667721</satinAlanMusteriKimligi>
+                    <satinAlanMusteriTelefonu>(505)-471-23-65</satinAlanMusteriTelefonu>
+                </satinAlanMusteriBilgisi>
+                <toplamUcreti>25.00</toplamUcreti>
+            </satis>
+        </satislar>
+    </magaza>
+    <magaza>
+        <magazaKodu>002</magazaKodu>
+        <magazaAdi>Aras Giyim</magazaAdi>
+        <magazaIli>Ankara</magazaIli>
+        <magazaAdresi>Kızılay Meydanı Leyla Apartman No:1</magazaAdresi>
+        <magazaCalisanSayisi>3</magazaCalisanSayisi>
+        <calisanlar>
+            <calisan>
+                <calisanAdi>Mert</calisanAdi>
+                <calisanSoyadi>Akasya</calisanSoyadi>
+                <calisanTelefonNumaralari>
+                    <calisanTelefonu>
+                        <telefon>(531)-222-22-22</telefon>
+                        <calisanTelefonuTipi>Mobil</calisanTelefonuTipi>
+                    </calisanTelefonu>
+                </calisanTelefonNumaralari>
+                <calisanAdresi>
+                    <calisanAdresIli>Ankara</calisanAdresIli>
+                    <calisanAdresIlcesi>Merkez</calisanAdresIlcesi>
+                    <calisanAcikAdresi>Asya Cad. Milli Sk. No:3</calisanAcikAdresi>
+                </calisanAdresi>
+            </calisan>
+            <calisan>
+                <calisanAdi>Gülten</calisanAdi>
+                <calisanSoyadi>Biricik</calisanSoyadi>
+                <calisanTelefonNumaralari>
+                    <calisanTelefonu>
+                        <telefon>(543)-333-33-33</telefon>
+                        <calisanTelefonuTipi>İş</calisanTelefonuTipi>
+                    </calisanTelefonu>
+                </calisanTelefonNumaralari>
+                <calisanAdresi>
+                    <calisanAdresIli>Ankara</calisanAdresIli>
+                    <calisanAdresIlcesi>Akyurt</calisanAdresIlcesi>
+                    <calisanAcikAdresi>Avrupa Cad. Duran Sk. No:2</calisanAcikAdresi>
+                </calisanAdresi>
+            </calisan>
+            <calisan>
+                <calisanAdi>Leyla</calisanAdi>
+                <calisanSoyadi>Altınel</calisanSoyadi>
+                <calisanTelefonNumaralari>
+                    <calisanTelefonu>
+                        <telefon>(312)-444-44-44</telefon>
+                        <calisanTelefonuTipi>Ev</calisanTelefonuTipi>
+                    </calisanTelefonu>
+                </calisanTelefonNumaralari>
+                <calisanAdresi>
+                    <calisanAdresIli>Ankara</calisanAdresIli>
+                    <calisanAdresIlcesi>Ayaş</calisanAdresIlcesi>
+                    <calisanAcikAdresi>Berivan Cad. Saz Sk. No:2</calisanAcikAdresi>
+                </calisanAdresi>
+            </calisan>
+        </calisanlar>
+        <urunKategorileri>
+            <urunKategori isim="ayakkabiKategorisi">
+                <urun>
+                    <urunAdi>Bot</urunAdi>
+                    <urunFiyati>350.99</urunFiyati>
+                    <urunStogu>45</urunStogu>
+                    <urunBarkodu>4356789872145</urunBarkodu>
+                    <urunTurleri>
+                        <urunTuru>Erkek</urunTuru>
+                    </urunTurleri>
+                </urun>
+                <urun>
+                    <urunAdi>Babet</urunAdi>
+                    <urunFiyati>40.00</urunFiyati>
+                    <urunStogu>100</urunStogu>
+                    <urunBarkodu>1009908070600</urunBarkodu>
+                    <urunTurleri>
+                        <urunTuru>Kadın</urunTuru>
+                    </urunTurleri>
+                </urun>          
+            </urunKategori>
+            <urunKategori isim="icGiyimKategorisi">
+                <urun>
+                    <urunAdi>Atlet</urunAdi>
+                    <urunFiyati>10.00</urunFiyati>
+                    <urunStogu>200</urunStogu>
+                    <urunBarkodu>1212121212121</urunBarkodu>
+                    <urunTurleri>
+                        <urunTuru>Kadın</urunTuru>
+                        <urunTuru>Erkek</urunTuru>
+                        <urunTuru>Çocuk</urunTuru>
+                    </urunTurleri>
+                </urun>
+            </urunKategori>
+        </urunKategorileri>
+        <satislar>
+            <satis>
+                <satinAlinanUrunBarkodu>1212121212121</satinAlinanUrunBarkodu>
+                <satinAlinanUrunBarkodu>1009908070600</satinAlinanUrunBarkodu>
+                <satinAlinanUrunBarkodu>4356789872145</satinAlinanUrunBarkodu>
+                <satinAlanMusteriBilgisi>
+                    <satinAlanMusteriAdi>Kenan Deliyürek</satinAlanMusteriAdi>
+                    <satinAlanMusteriKimligi>55555555555</satinAlanMusteriKimligi>
+                    <satinAlanMusteriTelefonu>(538)-115-20-42</satinAlanMusteriTelefonu>
+                </satinAlanMusteriBilgisi>
+                <toplamUcreti>400.99</toplamUcreti>
+            </satis>
+            <satis>
+                <satinAlinanUrunBarkodu>1009908070600</satinAlinanUrunBarkodu>
+                <satinAlanMusteriBilgisi>
+                    <satinAlanMusteriAdi>Didem Tok</satinAlanMusteriAdi>
+                    <satinAlanMusteriKimligi>20113453234</satinAlanMusteriKimligi>
+                    <satinAlanMusteriTelefonu>(542)-888-88-88</satinAlanMusteriTelefonu>
+                </satinAlanMusteriBilgisi>
+                <toplamUcreti>40.00</toplamUcreti>
+            </satis>
+        </satislar>
+    </magaza>
+</magazalar>

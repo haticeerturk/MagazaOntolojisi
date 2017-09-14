@@ -1,0 +1,1404 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#"
+     xml:base="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#adresi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#adresi">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Calisan"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Magaza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalisanAdresi"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#MagazaAdresi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#aittir -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#aittir">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Urun"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#UrunKategorileri"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#alir -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#alir">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#satilir"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Musteri"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Satis"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisanTipi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisanTipi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Calisan"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalismaZamani"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisir -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisir">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#sahiptir"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisir"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Calisan"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Magaza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#icerir -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#icerir">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Satis"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Musteri"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#icerir"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Urun"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#icindir -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#icindir">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#OzelGunler"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Musteri"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#indirimGunleri -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#indirimGunleri">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Magaza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Indirimler"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#ozeldir -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#ozeldir">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#MusteriyeOzel"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#ozeldir"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Engelli"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Gazi"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#pozisyonu -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#pozisyonu">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#pozisyonu"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Calisan"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#pozisyonu"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Pozisyonlar"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#rakibi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#rakibi">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Magaza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Magaza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#sahiptir -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#sahiptir">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Magaza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Calisan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#satilir -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#satilir">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Satis"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Musteri"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#telefonu -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#telefonu">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#telefonu"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Calisan"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#telefonu"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalisanTelefonu"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#vardir -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#vardir">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Magaza"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#UrunKategorileri"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Urun"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#UrunKategorileri"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#yapar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#yapar">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Magaza"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#yapar"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Satis"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#acikAdresi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#acikAdresi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalisanAdresi"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#MagazaAdresi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#adi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#adi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Calisan"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Magaza"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Musteri"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Urun"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#barkodu -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#barkodu">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Urun"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:length>13</xsd:length>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisanSayisi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisanSayisi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Magaza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#cinsiyeti -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#cinsiyeti">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Kisiler"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Erkek</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Kadın</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#fiyati -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#fiyati">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Urun"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#ilcesi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#ilcesi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalisanAdresi"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#MagazaAdresi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#ili -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#ili">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalisanAdresi"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#MagazaAdresi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#indirimMiktari -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#indirimMiktari">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Indirimler"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#kimligi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#kimligi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Musteri"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:length>11</xsd:length>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#magazaKodu -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#magazaKodu">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Magaza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#numarasi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#numarasi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CepTelefonu"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#EvTelefonu"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#IsTelefonu"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:pattern>\([1-9][0-9][0-9]\)-[0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]</xsd:pattern>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#soyadi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#soyadi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Calisan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#stok -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#stok">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Urun"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#telefonNumarasi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#telefonNumarasi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Musteri"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:pattern>\([1-9][0-9][0-9]\)-[0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]</xsd:pattern>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#toplamUcreti -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#toplamUcreti">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Satis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urunTuru -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urunTuru">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Urun"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Erkek</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Kadın</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Çocuk</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Adresler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Adresler"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#AksesuarKategorisi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#AksesuarKategorisi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#UrunKategorileri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#AltGiyimKategorisi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#AltGiyimKategorisi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#UrunKategorileri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#AyakkabiKategorisi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#AyakkabiKategorisi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#UrunKategorileri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Calisan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Calisan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Kisiler"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Musteri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalisanAdresi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalisanAdresi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Adresler"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#MagazaAdresi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalisanTelefonu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalisanTelefonu"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalismaZamani -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalismaZamani"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CepTelefonu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CepTelefonu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalisanTelefonu"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#EvTelefonu"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#IsTelefonu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Engelli -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Engelli">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Musteri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#EvTelefonu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#EvTelefonu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalisanTelefonu"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#IsTelefonu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Gazi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Gazi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Musteri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#IcGiyimKategorisi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#IcGiyimKategorisi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#UrunKategorileri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Indirimler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Indirimler"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#IsTelefonu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#IsTelefonu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalisanTelefonu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Kasiyer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Kasiyer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Pozisyonlar"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Satici"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Kisiler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Kisiler"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Magaza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Magaza"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#MagazaAdresi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#MagazaAdresi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Adresler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Mudur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Mudur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Pozisyonlar"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Satici"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Musteri -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Musteri">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Kisiler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#MusteriyeOzel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#MusteriyeOzel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Indirimler"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#OzelGunler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Normal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Normal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Musteri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#OgretmenlerGunu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#OgretmenlerGunu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#OzelGunler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#OzelGunler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#OzelGunler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Indirimler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Pozisyonlar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Pozisyonlar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Satici -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Satici">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Pozisyonlar"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Temizlikci"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Satis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Satis"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#SevgililerGunu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#SevgililerGunu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#OzelGunler"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#TamZamanli -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#TamZamanli">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalismaZamani"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#YariZamanli"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Temizlikci -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Temizlikci">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Pozisyonlar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Urun -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Urun"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#UrunKategorileri -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#UrunKategorileri"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#UstGiyimKategorisi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#UstGiyimKategorisi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#UrunKategorileri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#YariZamanli -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#YariZamanli">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalismaZamani"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Yilbasi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Yilbasi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#OzelGunler"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisan1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisan1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Calisan"/>
+        <adresi rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisanAdresi1"/>
+        <calisanTipi rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calismaZamani1"/>
+        <calisir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#magaza1"/>
+        <pozisyonu rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#pozisyon1"/>
+        <telefonu rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#isTelefonu1"/>
+        <adi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derya</adi>
+        <cinsiyeti>Kadın</cinsiyeti>
+        <soyadi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deniz</soyadi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisan2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisan2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Calisan"/>
+        <adresi rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisanAdresi2"/>
+        <calisanTipi rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calismaZamani1"/>
+        <calisir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#magaza1"/>
+        <pozisyonu rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#pozisyon2"/>
+        <telefonu rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#cepTelefonu1"/>
+        <adi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buğra</adi>
+        <cinsiyeti>Erkek</cinsiyeti>
+        <soyadi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taba</soyadi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisan3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisan3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Calisan"/>
+        <adresi rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisanAdresi3"/>
+        <calisanTipi rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calismaZamani1"/>
+        <calisir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#magaza2"/>
+        <pozisyonu rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#pozisyon3"/>
+        <telefonu rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#cepTelefonu2"/>
+        <adi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mert</adi>
+        <cinsiyeti>Erkek</cinsiyeti>
+        <soyadi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Akasya</soyadi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisan4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisan4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Calisan"/>
+        <adresi rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisanAdresi4"/>
+        <calisanTipi rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calismaZamani1"/>
+        <calisir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#magaza2"/>
+        <pozisyonu rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#pozisyon4"/>
+        <telefonu rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#isTelefonu2"/>
+        <adi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gülten</adi>
+        <cinsiyeti>Kadın</cinsiyeti>
+        <soyadi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biricik</soyadi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisan5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisan5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Calisan"/>
+        <adresi rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisanAdresi5"/>
+        <calisanTipi rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calismaZamani1"/>
+        <calisir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#magaza2"/>
+        <pozisyonu rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#pozisyon1"/>
+        <telefonu rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#evTelefonu1"/>
+        <adi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leyla</adi>
+        <cinsiyeti>Kadın</cinsiyeti>
+        <soyadi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Altınel</soyadi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisanAdresi1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisanAdresi1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalisanAdresi"/>
+        <acikAdresi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asya Cad. Milli Sk. No:3</acikAdresi>
+        <ilcesi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Osmangazi</ilcesi>
+        <ili rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bursa</ili>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisanAdresi2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisanAdresi2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalisanAdresi"/>
+        <acikAdresi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avrupa Cad. Derya Sk. No:1 Yıldırım</acikAdresi>
+        <ilcesi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Merkez</ilcesi>
+        <ili rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bursa</ili>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisanAdresi3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisanAdresi3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalisanAdresi"/>
+        <acikAdresi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asya Cad. Milli Sk. No:3</acikAdresi>
+        <ilcesi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Merkez</ilcesi>
+        <ili rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ankara</ili>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisanAdresi4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisanAdresi4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalisanAdresi"/>
+        <acikAdresi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avrupa Cad. Duran Sk. No:2</acikAdresi>
+        <ilcesi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Akyurt</ilcesi>
+        <ili rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ankara</ili>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisanAdresi5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisanAdresi5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CalisanAdresi"/>
+        <acikAdresi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berivan Cad. Saz Sk. No:2</acikAdresi>
+        <ilcesi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ayaş</ilcesi>
+        <ili rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ankara</ili>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calismaZamani1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calismaZamani1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#TamZamanli"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calismaZamani2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calismaZamani2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#YariZamanli"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#cepTelefonu1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#cepTelefonu1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CepTelefonu"/>
+        <numarasi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(542)-222-22-22</numarasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#cepTelefonu2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#cepTelefonu2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#CepTelefonu"/>
+        <numarasi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(531)-222-22-22</numarasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#evTelefonu1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#evTelefonu1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#EvTelefonu"/>
+        <numarasi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(312)-444-44-44</numarasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#indirim1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#indirim1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#MusteriyeOzel"/>
+        <ozeldir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri1"/>
+        <ozeldir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri2"/>
+        <indirimMiktari rdf:datatype="http://www.w3.org/2001/XMLSchema#string">%50</indirimMiktari>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#indirim2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#indirim2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#OgretmenlerGunu"/>
+        <icindir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri1"/>
+        <icindir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri2"/>
+        <icindir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri3"/>
+        <icindir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri4"/>
+        <indirimMiktari rdf:datatype="http://www.w3.org/2001/XMLSchema#string">%20</indirimMiktari>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#indirim3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#indirim3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#SevgililerGunu"/>
+        <icindir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri1"/>
+        <icindir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri2"/>
+        <icindir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri3"/>
+        <icindir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri4"/>
+        <indirimMiktari rdf:datatype="http://www.w3.org/2001/XMLSchema#string">%10</indirimMiktari>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#indirim4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#indirim4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Yilbasi"/>
+        <icindir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri1"/>
+        <icindir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri2"/>
+        <icindir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri3"/>
+        <icindir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri4"/>
+        <indirimMiktari rdf:datatype="http://www.w3.org/2001/XMLSchema#string">%5</indirimMiktari>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#isTelefonu1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#isTelefonu1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#IsTelefonu"/>
+        <numarasi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(531)-111-11-11</numarasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#isTelefonu2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#isTelefonu2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#IsTelefonu"/>
+        <numarasi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(543)-333-33-33</numarasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#magaza1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#magaza1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Magaza"/>
+        <adresi rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#magazaAdresi1"/>
+        <indirimGunleri rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#indirim1"/>
+        <indirimGunleri rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#indirim2"/>
+        <rakibi rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#magaza2"/>
+        <sahiptir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisan1"/>
+        <sahiptir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#calisan2"/>
+        <vardir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urunKategorisi1"/>
+        <yapar rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#satis1"/>
+        <yapar rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#satis2"/>
+        <adi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HM Waikiki</adi>
+        <calisanSayisi rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</calisanSayisi>
+        <magazaKodu rdf:datatype="http://www.w3.org/2001/XMLSchema#string">001</magazaKodu>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#magaza2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#magaza2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Magaza"/>
+        <rakibi rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#magaza1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#magazaAdresi1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#magazaAdresi1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#MagazaAdresi"/>
+        <acikAdresi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cumhuriyet Caddesi İpek Sokak No:3</acikAdresi>
+        <ilcesi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orhangazi</ilcesi>
+        <ili rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bursa</ili>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Engelli"/>
+        <alir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#satis1"/>
+        <adi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arda Sazan</adi>
+        <cinsiyeti>Erkek</cinsiyeti>
+        <kimligi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24135763212</kimligi>
+        <telefonNumarasi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(532)-145-21-45</telefonNumarasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Gazi"/>
+        <alir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#satis3"/>
+        <adi>Kenan Deliyürek</adi>
+        <cinsiyeti>Erkek</cinsiyeti>
+        <kimligi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">55555555555</kimligi>
+        <telefonNumarasi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(538)-115-20-42</telefonNumarasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Normal"/>
+        <alir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#satis2"/>
+        <adi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aslı Şahin</adi>
+        <cinsiyeti rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kadın</cinsiyeti>
+        <kimligi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">55544667721</kimligi>
+        <telefonNumarasi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(505)-471-23-65</telefonNumarasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Normal"/>
+        <alir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#satis4"/>
+        <adi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Didem Tok</adi>
+        <cinsiyeti>Kadın</cinsiyeti>
+        <kimligi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20113453234</kimligi>
+        <telefonNumarasi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(542)-888-88-88</telefonNumarasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#pozisyon1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#pozisyon1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Mudur"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#pozisyon2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#pozisyon2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Kasiyer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#pozisyon3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#pozisyon3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Satici"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#pozisyon4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#pozisyon4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Temizlikci"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#satis1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#satis1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Satis"/>
+        <icerir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri1"/>
+        <icerir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun1"/>
+        <icerir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun4"/>
+        <satilir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri1"/>
+        <toplamUcreti rdf:datatype="http://www.w3.org/2001/XMLSchema#double">60.9</toplamUcreti>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#satis2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#satis2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Satis"/>
+        <icerir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri2"/>
+        <icerir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun4"/>
+        <satilir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri2"/>
+        <toplamUcreti rdf:datatype="http://www.w3.org/2001/XMLSchema#double">25.0</toplamUcreti>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#satis3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#satis3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Satis"/>
+        <icerir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri3"/>
+        <icerir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun5"/>
+        <icerir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun6"/>
+        <icerir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun7"/>
+        <satilir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri3"/>
+        <toplamUcreti rdf:datatype="http://www.w3.org/2001/XMLSchema#double">400.99</toplamUcreti>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#satis4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#satis4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Satis"/>
+        <icerir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri4"/>
+        <icerir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun6"/>
+        <satilir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#musteri4"/>
+        <toplamUcreti rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.0</toplamUcreti>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Urun"/>
+        <aittir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urunKategorisi1"/>
+        <adi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kazak</adi>
+        <barkodu rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1234567891021</barkodu>
+        <fiyati rdf:datatype="http://www.w3.org/2001/XMLSchema#double">35.9</fiyati>
+        <stok rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</stok>
+        <urunTuru>Erkek</urunTuru>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Urun"/>
+        <aittir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urunKategorisi1"/>
+        <adi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gömlek</adi>
+        <barkodu rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9128651237564</barkodu>
+        <fiyati rdf:datatype="http://www.w3.org/2001/XMLSchema#double">81.99</fiyati>
+        <stok rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</stok>
+        <urunTuru>Kadın</urunTuru>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Urun"/>
+        <aittir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urunKategorisi2"/>
+        <adi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pantalon</adi>
+        <barkodu rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5544221133667</barkodu>
+        <fiyati rdf:datatype="http://www.w3.org/2001/XMLSchema#double">50.0</fiyati>
+        <stok rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</stok>
+        <urunTuru>Kadın</urunTuru>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Urun"/>
+        <aittir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urunKategorisi2"/>
+        <adi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Şort</adi>
+        <barkodu rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9999900000888</barkodu>
+        <fiyati rdf:datatype="http://www.w3.org/2001/XMLSchema#double">25.0</fiyati>
+        <stok rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</stok>
+        <urunTuru>Çocuk</urunTuru>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Urun"/>
+        <aittir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urunKategorisi3"/>
+        <adi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bot</adi>
+        <barkodu rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4356789872145</barkodu>
+        <fiyati rdf:datatype="http://www.w3.org/2001/XMLSchema#double">350.99</fiyati>
+        <stok rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</stok>
+        <urunTuru>Erkek</urunTuru>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Urun"/>
+        <aittir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urunKategorisi3"/>
+        <adi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Babet</adi>
+        <barkodu rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1009908070600</barkodu>
+        <fiyati rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.0</fiyati>
+        <stok rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</stok>
+        <urunTuru>Kadın</urunTuru>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Urun"/>
+        <aittir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urunKategorisi4"/>
+        <adi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Atlet</adi>
+        <barkodu rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1212121212121</barkodu>
+        <fiyati rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.0</fiyati>
+        <stok rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</stok>
+        <urunTuru>Erkek</urunTuru>
+        <urunTuru>Kadın</urunTuru>
+        <urunTuru>Çocuk</urunTuru>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Urun"/>
+        <aittir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urunKategorisi5"/>
+        <adi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kolye</adi>
+        <barkodu rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1313131313131</barkodu>
+        <fiyati rdf:datatype="http://www.w3.org/2001/XMLSchema#double">25.0</fiyati>
+        <stok rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</stok>
+        <urunTuru>Kadın</urunTuru>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urunKategorisi1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urunKategorisi1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#UstGiyimKategorisi"/>
+        <vardir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun1"/>
+        <vardir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urunKategorisi2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urunKategorisi2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#AltGiyimKategorisi"/>
+        <vardir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun3"/>
+        <vardir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urunKategorisi3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urunKategorisi3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#AyakkabiKategorisi"/>
+        <vardir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun5"/>
+        <vardir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urunKategorisi4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urunKategorisi4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#IcGiyimKategorisi"/>
+        <vardir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urunKategorisi5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urunKategorisi5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#AksesuarKategorisi"/>
+        <vardir rdf:resource="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#urun8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#AksesuarKategorisi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#AltGiyimKategorisi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#AyakkabiKategorisi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#IcGiyimKategorisi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#UstGiyimKategorisi"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Engelli"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Gazi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Normal"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Kasiyer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Mudur"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Temizlikci"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#OgretmenlerGunu"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#SevgililerGunu"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hatice/ontologies/2016/11/untitled-ontology-28#Yilbasi"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

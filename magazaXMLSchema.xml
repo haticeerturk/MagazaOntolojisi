@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    
+    <xs:element name="magazalar">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="magaza" type="magazaType" minOccurs="1" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="magazaType">
+        <xs:sequence>
+            <xs:element name="magazaKodu" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="magazaAdi" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="magazaIli" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="magazaAdresi" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="magazaCalisanSayisi" type="xs:integer" minOccurs="1" maxOccurs="unbounded" />
+            <xs:element name="calisanlar" type="calisanlarType" />
+            <xs:element name="urunKategorileri" type="urunKategorileriType" />
+            <xs:element name="satislar" type="satislarType" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="calisanlarType">
+        <xs:sequence>
+            <xs:element name="calisan" type="calisanType" minOccurs="1" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="calisanType">
+        <xs:sequence>
+            <xs:element name="calisanAdi" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="calisanSoyadi" type="xs:string" minOccurs="1" />
+            <xs:element name="calisanTelefonNumaralari" type="calisanTelefonNumaralariType" />
+            <xs:element name="calisanAdresi" type="calisanAdresiType" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="calisanTelefonNumaralariType">
+        <xs:sequence>
+            <xs:element name="calisanTelefonu" type="calisanTelefonuType" minOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="telefonType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\([1-9][0-9][0-9]\)-[0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]" />
+            <xs:length value="15" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="telefon">
+        <xs:sequence>
+            <xs:element name="telefon" type="telefonType" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="calisanTelefonuType">
+        <xs:complexContent>
+            <xs:extension base="telefon">
+                <xs:sequence>
+                    <xs:element name="calisanTelefonuTipi" type="calisanTelefonuTypeEnum" minOccurs="1" maxOccurs="unbounded" />
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:simpleType name="calisanTelefonuTypeEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="İş" />
+            <xs:enumeration value="Mobil" />
+            <xs:enumeration value="Ev" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="calisanAdresiType">
+        <xs:sequence>
+            <xs:element name="calisanAdresIli  " type="xs:string" />
+            <xs:element name="calisanAdresIlcesi" type="xs:string" />
+            <xs:element name="calisanAcikAdresi" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="urunKategorileriType">
+        <xs:sequence>
+            <xs:element name="urunKategori" type="urunKategoriType" minOccurs="1" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="urunKategoriType">
+        <xs:sequence>
+            <xs:element name="urun" type="urunType" minOccurs="1" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="isim" type="isimType" use="required" />
+    </xs:complexType>
+    
+    <xs:complexType name="urunType">
+        <xs:sequence>
+            <xs:element name="urunAdi" type="xs:string" />
+            <xs:element name="urunFiyati" type="xs:double" />
+            <xs:element name="urunStogu" type="xs:integer" />
+            <xs:element name="urunBarkodu" type="urunBarkoduType" />
+            <xs:element name="urunTurleri" type="urunTurleriType" minOccurs="1" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="urunBarkoduType">
+        <xs:restriction base="xs:string">
+            <xs:length value="13" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="urunTurleriType">
+        <xs:sequence>
+            <xs:element name="urunTuru" type="urunTuruType" minOccurs="1" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="urunTuruType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Erkek" />
+            <xs:enumeration value="Kadın" />
+            <xs:enumeration value="Çocuk" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="isimType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ustGiyimKategorisi" />
+            <xs:enumeration value="altGiyimKategorisi" />
+            <xs:enumeration value="icGiyimKategorisi" />
+            <xs:enumeration value="ayakkabiKategorisi" />
+            <xs:enumeration value="aksesuarKategorisi" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="satislarType">
+        <xs:sequence>
+            <xs:element name="satis" type="satisType" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="satisType">
+        <xs:sequence>
+            <xs:element name="satinAlinanUrunBarkodu" type="urunBarkoduType" minOccurs="1" maxOccurs="unbounded" />
+            <xs:element name="satinAlanMusteriBilgisi" type="satinAlanMusteriBilgisiType" />
+            <xs:element name="toplamUcreti" type="xs:double" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="satinAlanMusteriBilgisiType">
+        <xs:sequence>
+            <xs:element name="satinAlanMusteriAdi" type="xs:string" />
+            <xs:element name="satinAlanMusteriKimligi" type="satinAlanMusteriKimligiType" minOccurs="0" maxOccurs="1" />
+            <xs:element name="satinAlanMusteriTelefonu" type="telefonType" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="satinAlanMusteriKimligiType">
+        <xs:restriction base="xs:string">
+            <xs:length value="11" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+</xs:schema>
